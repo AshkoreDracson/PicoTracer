@@ -56,6 +56,7 @@
     <Compile Include="Core\Math\Mathf.cs" />
     <Compile Include="Core\Math\Vector2.cs" />
     <Compile Include="Core\Math\Vector3.cs" />
+    <Compile Include="Core\Misc\Flow.cs" />
     <Compile Include="Core\Rendering\RenderPool.cs" />
     <Compile Include="Core\Time.cs" />
     <Compile Include="Program.cs" />

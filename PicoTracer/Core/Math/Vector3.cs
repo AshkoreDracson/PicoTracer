@@ -143,6 +143,12 @@ namespace PicoTracer
 
         // STATIC METHODS & PROPERTIES
 
+        public static Vector3 Cross(Vector3 a, Vector3 b)
+        {
+            return new Vector3(a.y * b.z - b.y * a.z,
+                                 -(a.x * b.z - b.x * a.z),
+                                 a.x * b.y - b.x * a.y);
+        }
         public static double Dot(Vector3 a, Vector3 b)
         {
             return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);

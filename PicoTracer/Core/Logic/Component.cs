@@ -5,14 +5,7 @@ namespace PicoTracer
     {
         public GameObject gameObject { get; internal set; }
 
-        public virtual void Start()
-        {
-
-        }
-
-        public virtual void Update()
-        {
-            
-        }
+        public virtual void Start() { }
+        public virtual void Update() { }
     }
 }

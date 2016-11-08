@@ -25,16 +25,19 @@ namespace PicoTracer
         public void Initialize()
         {
             Debug.Write("Initializing Engine...");
+
             Window = new RenderWindow("PicoTracer", new Size(640, 480));
             RenderPool = new RenderPool();
             Thread t = new Thread(() => Start());
             t.Start();
+
             Debug.WriteLine("Done");
             Application.Run(Window);
         }
 
         void Start()
         {
+            CallFlow(Flow.Start);
             Update();
         }
 
@@ -44,15 +47,15 @@ namespace PicoTracer
             {
                 DateTime start = DateTime.Now;
 
-                // Update stuff
-                Draw(); // Draw
+                CallFlow(Flow.Update);
+                Draw();
 
                 DateTime end = DateTime.Now;
 
                 double computedDeltaTime = (end - start).TotalSeconds;
                 if (computedDeltaTime < 1.00 / TargetFramerate)
                 {
-                    Thread.Sleep((int)((1.00 / TargetFramerate - computedDeltaTime) * 1000));
+                    Thread.Sleep((int)((1.00 / TargetFramerate - computedDeltaTime) * 1000)); // Sleep the correct amount of time for TargetFramerate
                     computedDeltaTime = (1.00 / TargetFramerate);
                 }
                 
@@ -67,6 +70,19 @@ namespace PicoTracer
         {
             FastBitmap renderedImage = RenderPool.Fetch(Viewport.Width, Viewport.Height);
             Window.UpdateViewport(renderedImage);
+        }
+
+        void CallFlow(Flow flow)
+        {
+            switch (flow)
+            {
+                case Flow.Start:
+                    break;
+                case Flow.Update:
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void Quit()

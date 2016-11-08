@@ -42,7 +42,7 @@
 
         public void Translate(Vector3 a)
         {
-            this._position += a;
+            _position += a;
         }
     }
 }
