@@ -38,7 +38,7 @@ namespace PicoTracer
 
         void Start()
         {
-            CallFlow(Flow.Start);
+            CallFlow(GameFlow.Start);
             Update();
         }
 
@@ -48,7 +48,7 @@ namespace PicoTracer
             {
                 DateTime start = DateTime.Now;
 
-                CallFlow(Flow.Update);
+                CallFlow(GameFlow.Update);
                 Draw();
 
                 DateTime end = DateTime.Now;
@@ -73,13 +73,13 @@ namespace PicoTracer
             Window.UpdateViewport(renderedImage);
         }
 
-        void CallFlow(Flow flow)
+        void CallFlow(GameFlow flow)
         {
             GameObject[] gos = GameObject.GetAllGameObjects();
 
             switch (flow)
             {
-                case Flow.Start:
+                case GameFlow.Start:
                     foreach (GameObject go in gos)
                     {
                         Component[] comps = go.GetAllComponents();
@@ -89,7 +89,7 @@ namespace PicoTracer
                         }
                     }
                     break;
-                case Flow.Update:
+                case GameFlow.Update:
                     foreach (GameObject go in gos)
                     {
                         Component[] comps = go.GetAllComponents();

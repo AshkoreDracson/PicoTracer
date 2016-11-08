@@ -1,6 +1,6 @@
 ﻿namespace PicoTracer
 {
-    public enum Flow
+    public enum GameFlow
     {
         Start,
         Update,

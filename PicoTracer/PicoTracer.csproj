@@ -58,7 +58,7 @@
     <Compile Include="Core\Math\Mathf.cs" />
     <Compile Include="Core\Math\Vector2.cs" />
     <Compile Include="Core\Math\Vector3.cs" />
-    <Compile Include="Core\Misc\Flow.cs" />
+    <Compile Include="Core\Misc\GameFlow.cs" />
     <Compile Include="Core\Rendering\Material.cs" />
     <Compile Include="Core\Rendering\Renderer.cs" />
     <Compile Include="Core\Rendering\RenderPool.cs" />
