@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PicoTracer
 {
-    public class Vector2
+    public struct Vector2
     {
         // VARIABLES & PROPERTIES
 

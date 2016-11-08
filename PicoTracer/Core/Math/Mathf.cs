@@ -21,6 +21,14 @@ namespace PicoTracer
                 return max;
             return val;
         }
+        public static float Clamp01(float val)
+        {
+            if (val < 0)
+                return 0;
+            else if (val > 1)
+                return 1;
+            return val;
+        }
         public static float Spreader(float val, float min, float max)
         {
             float mid = (max + min) / 2;
