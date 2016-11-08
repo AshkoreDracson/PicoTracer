@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Core\Singleton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DefaultScene.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

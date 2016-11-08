@@ -28,6 +28,7 @@ namespace PicoTracer
 
             Window = new RenderWindow("PicoTracer", new Size(640, 480));
             RenderPool = new RenderPool();
+            DefaultScene.Initialize();
             Thread t = new Thread(() => Start());
             t.Start();
 
@@ -74,11 +75,29 @@ namespace PicoTracer
 
         void CallFlow(Flow flow)
         {
+            GameObject[] gos = GameObject.GetAllGameObjects();
+
             switch (flow)
             {
                 case Flow.Start:
+                    foreach (GameObject go in gos)
+                    {
+                        Component[] comps = go.GetAllComponents();
+                        foreach (Component comp in comps)
+                        {
+                            comp.Start();
+                        }
+                    }
                     break;
                 case Flow.Update:
+                    foreach (GameObject go in gos)
+                    {
+                        Component[] comps = go.GetAllComponents();
+                        foreach (Component comp in comps)
+                        {
+                            comp.Update();
+                        }
+                    }
                     break;
                 default:
                     break;
