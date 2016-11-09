@@ -9,5 +9,9 @@
         public double lightIntensity { get; set; }
         public Color lightColor { get; set; }
         public Vector3 lightDirection { get; set; }
+        /// <summary>
+        /// Determines whetever the lighting data is GI, if true then lightDirection is zero.
+        /// </summary>
+        public bool lightGI { get; set; }
     }
 }
