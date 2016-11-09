@@ -15,7 +15,7 @@ namespace PicoTracer
             Text = title;
 
             Viewport = new PictureBox();
-            Viewport.BackColor = Color.Black;
+            Viewport.BackColor = System.Drawing.Color.Black;
             Viewport.Dock = DockStyle.Fill;
             Viewport.SizeMode = PictureBoxSizeMode.StretchImage;
 
