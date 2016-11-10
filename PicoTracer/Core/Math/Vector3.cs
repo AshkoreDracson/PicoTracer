@@ -76,6 +76,32 @@ namespace PicoTracer
             this.z = z;
         }
 
+        public double this[int i]
+        {
+            get
+            {
+                if (i == 0)
+                    return x;
+                else if (i == 1)
+                    return y;
+                else if (i == 2)
+                    return z;
+
+                throw new InvalidVectorIndexException();
+            }
+            set
+            {
+                if (i == 0)
+                    x = value;
+                else if (i == 1)
+                    y = value;
+                else if (i == 2)
+                    z = value;
+
+                throw new InvalidVectorIndexException();
+            }
+        }
+
         // OPERATORS
 
         public static Vector3 operator +(Vector3 a, Vector3 b)
@@ -126,9 +152,14 @@ namespace PicoTracer
                 return true;
             return false;
         }
+
         public static implicit operator Vector2(Vector3 a)
         {
             return new Vector2(a.x, a.y);
+        }
+        public static implicit operator Vector4(Vector3 a)
+        {
+            return new Vector4(a.x, a.y, a.z, 0);
         }
 
         // METHODS & PROPERTIES

@@ -137,9 +137,14 @@ namespace PicoTracer
                 return true;
             return false;
         }
+
         public static implicit operator Vector2(Vector4 a)
         {
             return new Vector2(a.x, a.y);
+        }
+        public static implicit operator Vector3(Vector4 a)
+        {
+            return new Vector3(a.x, a.y, a.z);
         }
 
         // METHODS & PROPERTIES
