@@ -37,11 +37,11 @@
 
         public Vector4 GetRow(int row)
         {
-            return new Vector4(matrix[0][row], matrix[1][row], matrix[2][row], matrix[3][row]);
+            return matrix[row];
         }
         public Vector4 GetColumn(int col)
         {
-            return matrix[col];
+            return new Vector4(matrix[0][col], matrix[1][col], matrix[2][col], matrix[3][col]);
         }
 
         public static explicit operator Matrix4x4(Vector4[] values)
