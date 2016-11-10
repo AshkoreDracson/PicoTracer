@@ -37,7 +37,7 @@
 
         public Vector4 GetRow(int row)
         {
-            return matrix[row];
+            return new Vector4(matrix[0][row], matrix[1][row], matrix[2][row], matrix[3][row]);
         }
         public Vector4 GetColumn(int col)
         {
