@@ -28,7 +28,7 @@ namespace PicoTracer
 
             Window = new RenderWindow("PicoTracer", new Size(640, 480));
             RenderPool = new RenderPool();
-            DefaultScene.Initialize();
+            new DefaultScene().Initialize();
             Thread t = new Thread(() => Start());
             t.Start();
 

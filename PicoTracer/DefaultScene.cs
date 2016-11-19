@@ -1,8 +1,8 @@
 ﻿namespace PicoTracer
 {
-    public static class DefaultScene
+    public class DefaultScene : Scene
     {
-        public static void Initialize()
+        public override void Initialize()
         {
 
         }

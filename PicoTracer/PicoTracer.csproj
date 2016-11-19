@@ -68,6 +68,7 @@
     <Compile Include="Core\Rendering\RenderPool.cs" />
     <Compile Include="Core\Rendering\ShaderInputInfo.cs" />
     <Compile Include="Core\Rendering\SphereRenderer.cs" />
+    <Compile Include="Core\Scene.cs" />
     <Compile Include="Core\Time.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Core\Rendering\RenderWindow.cs">
